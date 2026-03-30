@@ -29,7 +29,7 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
-![Javascript](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=js&logoColor=white)
+![Js](https://img.shields.io/badge/Js-000000?style=for-the-badge&logo=Javascript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ### Animation & 3D

@@ -1,0 +1,453 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
+    <title>Contact | Mahmoud Mohamed (Shiko)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#9c7538",
+              "background-light": "#f8f7f5",
+              "background-dark": "#0c0b0a",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+      .glass {
+        background: rgba(211, 193, 164, 0.5);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(156, 117, 56, 0.2);
+      }
+      .dark .glass {
+        background: rgba(26, 23, 21, 0.7);
+      }
+      .neo-glow:hover {
+        box-shadow: 0 0 20px rgba(156, 117, 56, 0.4);
+      }
+      .text-glow {
+        text-shadow: 0 0 10px rgba(156, 117, 56, 0.3);
+      }
+      .skill-card:hover {
+        box-shadow: 0 0 15px rgba(156, 117, 56, 0.3);
+        border-color: #9c7538;
+      }
+      #back-to-top {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      #back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col overflow-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
+          <div
+            class="glass flex items-center justify-between w-full max-w-[1200px] px-6 py-3 rounded-2xl border border-primary/20"
+          >
+            <div class="flex items-center">
+              <a
+                href="../index.html"
+                class="img size-9 flex items-center justify-center"
+              >
+                <img src="../images/logo.png" alt="My logo" class="w-full" />
+              </a>
+              <span
+                class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
+                >SHIKO</span
+              >
+            </div>
+            <div
+              class="hidden md:flex items-center dark:text-[#ebdabe] text-[#27221a] gap-8"
+            >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="../index.html"
+                >Home</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="projects.html"
+                >Projects</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="about.html#Experience"
+                >Experience</a
+              >
+              <a
+                class="text-sm font-medium hover:text-primary transition-colors"
+                href="about.html"
+                >About</a
+              >
+              <a
+                class="text-sm font-medium text-primary transition-colors"
+                href="contact.html"
+                >Contact Me</a
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                class="p-2 rounded-xl dark:text-[#ebdabe] text-[#27221a] hover:bg-primary/10 transition-colors flex items-center justify-center"
+                id="theme-toggle"
+              >
+                <span
+                  class="text-xl material-symbols-outlined dark:hidden -translate-y-0.5"
+                >
+                  <i class="fa-regular fa-moon"></i>
+                </span>
+                <span
+                  class="text-xl material-symbols-outlined hidden dark:block -translate-y-0.5"
+                >
+                  <i class="fa-regular fa-sun"></i>
+                </span>
+              </button>
+              <div class="btn">
+                <button
+                  class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-xl text-sm font-bold transition-all neo-glow"
+                >
+                  Hire Me
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <main
+          class="flex-1 flex flex-col items-center justify-center px-6 pb-12 pt-32 md:px-20 lg:px-40"
+        >
+          <div
+            class="relative max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"
+          >
+            <!-- Decor -->
+            <!-- rotate-[150deg] -->
+            <div
+              class="iii flex gap-3.5 -z-10 justify-center items-center absolute top-0 -left-1/3 inset-0 border-2 border-primary/30 rounded-[2.5rem]"
+            >
+              <!-- -rotate-[45deg] -->
+              <div
+                class="ii size-2/5 -z-20 inset-0 border-2 bg-background-dark/5 backdrop-blur-[10px] border-primary/30 rounded-[2.5rem]"
+              ></div>
+              <!-- -rotate-[45deg] -->
+              <div
+                class="ii size-2/5 -z-20 inset-0 border-2 bg-background-dark/5 backdrop-blur-[10px] border-primary/30 rounded-[2.5rem]"
+              ></div>
+            </div>
+            <!-- Left Side: Content & Socials -->
+            <div class="flex flex-col gap-8">
+              <div class="space-y-4">
+                <span
+                  class="fade flex justify-center items-center gap-1.5 w-fit px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider"
+                >
+                  <span class="relative flex h-2 w-2">
+                    <span
+                      class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+                    ></span>
+                    <span
+                      class="relative inline-flex rounded-full h-2 w-2 bg-primary"
+                    ></span>
+                  </span>
+                  Available for hire</span
+                >
+                <h1
+                  class="fade text-5xl md:text-6xl font-black tracking-tighter leading-none"
+                >
+                  Let's build <br /><span class="text-primary">together.</span>
+                </h1>
+                <p
+                  class="fade text-slate-600 dark:text-slate-400 text-lg max-w-md"
+                >
+                  Have a project in mind or just want to say hi? Feel free to
+                  reach out. Mahmoud Mohamed is ready to bring your ideas to
+                  life.
+                </p>
+              </div>
+              <div class="flex flex-col gap-6">
+                <div class="fade flex items-center gap-4 group">
+                  <div
+                    class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform"
+                  >
+                    <span class="material-symbols-outlined">mail</span>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold uppercase text-slate-500">
+                      Email Me
+                    </p>
+                    <p class="text-lg font-medium">mm01211674773@gmail.com</p>
+                  </div>
+                </div>
+                <div class="fade flex items-center gap-4 group">
+                  <div
+                    class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform"
+                  >
+                    <span class="material-symbols-outlined">location_on</span>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold uppercase text-slate-500">
+                      Based In
+                    </p>
+                    <p class="text-lg font-medium">Garbia, Egypt</p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-8 border-t border-primary/10">
+                <p class="fade text-sm font-bold uppercase text-slate-500 mb-4">
+                  Social Connections
+                </p>
+                <div class="flex gap-4">
+                  <a
+                    class="fade group text-2xl font-medium"
+                    href="https://linkedin.com/in/%D9%85%D8%AD%D9%85%D9%88%D8%AF-%D9%85%D8%AD%D9%85%D8%AF-a92045361/"
+                    ><i
+                      class="fa-brands fa-square-linkedin text-slate-500 dark:text-slate-400 group-hover:text-primary transition-all duration-200"
+                    ></i
+                  ></a>
+                  <a
+                    class="fade group text-2xl font-medium"
+                    href="https://github.com/shiko552009"
+                    ><i
+                      class="fa-brands fa-github text-slate-500 dark:text-slate-400 group-hover:text-primary transition-all duration-200"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side: Contact Form -->
+            <div
+              class="form glass p-8 md:p-10 rounded-3xl relative overflow-hidden bg-white/50 dark:bg-transparent"
+            >
+              <!-- Decorative gradient -->
+              <div
+                class="absolute -top-24 -right-24 size-48 bg-primary/10 blur-[80px] rounded-full"
+              ></div>
+              <form class="space-y-6 relative z-10">
+                <div class="grid grid-cols-1 gap-6">
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="form-item text-sm font-semibold text-slate-500 dark:text-slate-400 px-1"
+                      >Full Name</label
+                    >
+                    <div class="form-item">
+                      <input
+                        class="w-full bg-white dark:bg-background-dark/50 border border-primary/20 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 text-slate-900 dark:text-slate-100"
+                        placeholder="John Doe"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="form-item text-sm font-semibold text-slate-500 dark:text-slate-400 px-1"
+                      >Email Address</label
+                    >
+                    <div class="form-item">
+                      <input
+                        class="w-full bg-white dark:bg-background-dark/50 border border-primary/20 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 text-slate-900 dark:text-slate-100"
+                        placeholder="john@example.com"
+                        type="email"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="form-item text-sm font-semibold text-slate-500 dark:text-slate-400 px-1"
+                      >Your Message</label
+                    >
+                    <div class="form-item">
+                      <textarea
+                        class="w-full bg-white dark:bg-background-dark/50 border border-primary/20 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 text-slate-900 dark:text-slate-100 resize-none"
+                        placeholder="Tell me about your project..."
+                        rows="4"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-item">
+                  <button
+                    class="w-full group bg-primary hover:bg-[#86632e] text-white dark:text-background-dark font-bold text-lg py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-[0_0_20px_rgba(156,117,56,0.3)]"
+                    type="submit"
+                  >
+                    Send Message
+                    <span
+                      class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                      >send</span
+                    >
+                  </button>
+                </div>
+                <p class="f text-center text-xs text-slate-500 mt-4 italic">
+                  * Typical response time is within 24 hours.
+                </p>
+              </form>
+            </div>
+          </div>
+        </main>
+        <!-- Footer -->
+        <footer class="px-6 py-8 md:px-20 lg:px-40 border-t border-primary/10 backdrop-blur-sm">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-slate-500 text-sm">
+              © 2024 Shiko. All rights reserved.
+            </p>
+            <div class="flex gap-6 text-sm font-medium text-slate-500">
+              <a class="hover:text-primary transition-colors" href="#"
+                >Privacy Policy</a
+              >
+              <a class="hover:text-primary transition-colors" href="#"
+                >Terms of Service</a
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- Back to Top Button -->
+    <button
+      aria-label="Back to top"
+      class="group fixed bottom-8 right-8 z-60 size-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-300"
+      id="back-to-top"
+    >
+      <i
+        class="fa-solid fa-arrow-up z-50 group-hover:-translate-y-1 transition-all duration-150"
+      ></i>
+      <div
+        id="back-to-top-effect"
+        class="absolute top-0 right-0 z-40 w-full h-full hidden group-hover:block bg-primary border border-primary rounded-full"
+      ></div>
+    </button>
+    <!-- GSAP links -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+
+    <script>
+      // Theme Toggle Logic
+      const themeToggleBtn = document.getElementById("theme-toggle");
+      const htmlElement = document.documentElement;
+
+      themeToggleBtn.addEventListener("click", () => {
+        htmlElement.classList.toggle("dark");
+        const isDark = htmlElement.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+
+      // Initialize theme from local storage if available
+      if (localStorage.getItem("theme") === "light") {
+        htmlElement.classList.remove("dark");
+      } else if (
+        window.matchMedia("(prefers-color-scheme: dark)").matches &&
+        !localStorage.getItem("theme")
+      ) {
+        htmlElement.classList.add("dark");
+      }
+
+      // GSAP
+      let tl = gsap.timeline({
+        scrollTrigger:{
+              trigger: `.form`,
+              start:`top 80%`,
+              // markers:true
+            }
+      });
+      let tll = gsap.timeline();
+      document.addEventListener(`DOMContentLoaded`, (event) => {
+        tll.from(`nav`, {
+          opacity: 0,
+          y: 150,
+          duration: 0.6,
+          delay: 0.3,
+        });
+
+        gsap.from(`.ii`, {
+          rotate: -360,
+          repeat: -1,
+          duration: 10,
+          ease: `none`,
+        });
+        gsap.from(`.iii`, {
+          rotate: 360,
+          repeat: -1,
+          duration: 20,
+          ease: `none`,
+        });
+
+        tl.from(`.form`, {
+          opacity: 0,
+          y: 55,
+          duration: 1,
+          ease: `back`,
+          delay: 0.6,
+        });
+        tl.from(`.form-item`, {
+          opacity: 0,
+          x: -55,
+          duration: 0.6,
+          ease: `back`,
+          stagger: 0.2,
+        });
+        tl.from(`.f`, {
+          duration: 0.8,
+          opacity: 0,
+          ease: `back`,
+        });
+
+        tll.from(
+          `.fade`,
+          {
+            opacity: 0,
+            y: 55,
+            duration: 1,
+            stagger: 0.3,
+          },
+          `-=0.2`,
+        );
+      });
+
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    </script>
+    <script src="../src/Fontawesome/all.min.js"></script>
+  </body>
+</html>

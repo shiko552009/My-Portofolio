@@ -43,6 +43,23 @@
       };
     </script>
     <style>
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 5px;
+      }
+      /* ::-webkit-scrollbar-track:hover {
+        background: #453316;
+      } */
+      ::-webkit-scrollbar-thumb {
+        background: #9c7538;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b78b44;
+      }
       * {
         scroll-behavior: smooth;
       }
@@ -80,13 +97,14 @@
     class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300"
   >
     <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <div class="scroll fixed top-0 left-0 bg-[#b58d4c] h-0.5 rounded-r-md z-50"></div>
       <div class="layout-container flex h-full grow flex-col">
         <!-- Top Navigation Bar -->
         <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
           <div
             class="glass flex items-center justify-between w-full max-w-[1200px] px-6 py-3 rounded-2xl border border-primary/20"
           >
-            <div class="flex items-center">
+            <div class="flex items-center gap-1.5">
               <a
                 href="../index.html"
                 class="img size-9 flex items-center justify-center"
@@ -94,7 +112,7 @@
                 <img src="../images/logo.png" alt="My logo" class="w-full" />
               </a>
               <span
-                class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
+                class="text-xl font-bold tracking-widest text-slate-900 dark:text-slate-100"
                 >SHIKO</span
               >
             </div>
@@ -591,7 +609,7 @@
               <div class="size-8 flex items-center justify-center img">
                 <img src="../images/logo.png" alt="w-full" />
               </div>
-              <span class="text-lg font-bold tracking-tight">SHIKO</span>
+              <span class="text-lg font-bold tracking-widest">SHIKO</span>
             </div>
             <p class="text-slate-500 text-sm">
               © 2024 Mahmoud Mohamed. All rights reserved.
@@ -676,6 +694,17 @@
       // GSAP
       let tl = gsap.timeline()
       document.addEventListener(`DOMContentLoaded`, (event) => {
+        gsap.fromTo(`.scroll`, {
+          width: `0`,
+        },{
+          width:`100%`,
+          scrollTrigger: {
+            trigger: `body`,
+            start: `top top`,
+            end: `bottom bottom`,
+            scrub: 2,
+          },
+        });
         tl.from(`nav`, {
           opacity: 0,
           y: 150,

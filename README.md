@@ -16,41 +16,45 @@
 
 ## 📊 Portfolio Stats
 
-| Metric | Value |
-|--------|-------|
-| ⏱️ Years Experience | 3+ |
-| 📁 Projects Done | 20+ |
-| 🌍 Global Clients | 15+ |
-| ✅ Success Rate | 100% |
-| 😊 Happy Clients | 50+ |
+| Metric              | Value |
+| ------------------- | ----- |
+| ⏱️ Years Experience | 3+    |
+| 📁 Projects Done    | 20+   |
+| 🌍 Global Clients   | 15+   |
+| ✅ Success Rate     | 100%  |
+| 😊 Happy Clients    | 50+   |
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 ![Js](https://img.shields.io/badge/Js-000000?style=for-the-badge&logo=Javascript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ### Animation & 3D
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
----
+
+## ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 
 ## 📂 Featured Projects
 
 ### 1. 🛒 E-commerce Dashboard
+
 **Tech:** React, Tailwind  
 A high-performance management panel with real-time analytics.
 
 ---
 
 ### 2. 🚀 SaaS Landing Page
+
 **Tech:** Next.js, Framer Motion  
 Convert visitors into customers with this ultra-fast landing page.
 
 ---
 
 ### 3. 🎨 Creative Portfolio
+
 **Tech:** Three.js, GSAP  
 An immersive 3D experience for artists and photographers.
 

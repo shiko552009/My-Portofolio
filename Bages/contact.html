@@ -43,6 +43,23 @@
       };
     </script>
     <style>
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 5px;
+      }
+      /* ::-webkit-scrollbar-track:hover {
+        background: #453316;
+      } */
+      ::-webkit-scrollbar-thumb {
+        background: #9c7538;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b78b44;
+      }
       * {
         scroll-behavior: smooth;
       }
@@ -82,13 +99,14 @@
     <div
       class="relative flex h-auto min-h-screen w-full flex-col overflow-hidden"
     >
+      <div class="scroll fixed top-0 left-0 bg-[#b58d4c] h-0.5 rounded-r-md z-50"></div>
       <div class="layout-container flex h-full grow flex-col">
         <!-- Navigation -->
         <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
           <div
             class="glass flex items-center justify-between w-full max-w-[1200px] px-6 py-3 rounded-2xl border border-primary/20"
           >
-            <div class="flex items-center">
+            <div class="flex items-center gap-1.5">
               <a
                 href="../index.html"
                 class="img size-9 flex items-center justify-center"
@@ -96,7 +114,7 @@
                 <img src="../images/logo.png" alt="My logo" class="w-full" />
               </a>
               <span
-                class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
+                class="text-xl font-bold tracking-widest text-slate-900 dark:text-slate-100"
                 >SHIKO</span
               >
             </div>
@@ -207,7 +225,7 @@
               <div class="flex flex-col gap-6">
                 <div class="fade flex items-center gap-4 group">
                   <div
-                    class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform"
+                    class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 backdrop-blur-[5px] transition-transform"
                   >
                     <span class="material-symbols-outlined">mail</span>
                   </div>
@@ -220,7 +238,20 @@
                 </div>
                 <div class="fade flex items-center gap-4 group">
                   <div
-                    class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform"
+                    class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 backdrop-blur-[5px] transition-transform"
+                  >
+                    <span class="material-symbols-outlined">phone</span>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold uppercase text-slate-500">
+                      call Me
+                    </p>
+                    <p class="text-lg font-medium">012 1167 4773</p>
+                  </div>
+                </div>
+                <div class="fade flex items-center gap-4 group">
+                  <div
+                    class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 backdrop-blur-[5px] transition-transform"
                   >
                     <span class="material-symbols-outlined">location_on</span>
                   </div>
@@ -232,7 +263,7 @@
                   </div>
                 </div>
               </div>
-              <div class="pt-8 border-t border-primary/10">
+              <div class="fade pt-8 border-t border-primary/10">
                 <p class="fade text-sm font-bold uppercase text-slate-500 mb-4">
                   Social Connections
                 </p>
@@ -260,7 +291,7 @@
             >
               <!-- Decorative gradient -->
               <div
-                class="absolute -top-24 -right-24 size-48 bg-primary/10 blur-[80px] rounded-full"
+                class="absolute -top-24 -right-24 size-[255px] bg-primary/15 blur-[75px] rounded-full"
               ></div>
               <form class="space-y-6 relative z-10">
                 <div class="grid grid-cols-1 gap-6">
@@ -271,7 +302,7 @@
                     >
                     <div class="form-item">
                       <input
-                        class="w-full bg-white dark:bg-background-dark/50 border border-primary/20 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 text-slate-900 dark:text-slate-100"
+                        class="w-full bg-white dark:bg-background-dark/50 border border-primary/20 rounded-xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 text-slate-900 dark:text-slate-100"
                         placeholder="John Doe"
                         type="text"
                       />
@@ -284,7 +315,7 @@
                     >
                     <div class="form-item">
                       <input
-                        class="w-full bg-white dark:bg-background-dark/50 border border-primary/20 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 text-slate-900 dark:text-slate-100"
+                        class="w-full bg-white dark:bg-background-dark/50 border border-primary/20 rounded-xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 text-slate-900 dark:text-slate-100"
                         placeholder="john@example.com"
                         type="email"
                       />
@@ -297,7 +328,7 @@
                     >
                     <div class="form-item">
                       <textarea
-                        class="w-full bg-white dark:bg-background-dark/50 border border-primary/20 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 text-slate-900 dark:text-slate-100 resize-none"
+                        class="w-full bg-white dark:bg-background-dark/50 border border-primary/20 rounded-xl px-5 py-4 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600 text-slate-900 dark:text-slate-100 resize-none"
                         placeholder="Tell me about your project..."
                         rows="4"
                       ></textarea>
@@ -324,7 +355,9 @@
           </div>
         </main>
         <!-- Footer -->
-        <footer class="px-6 py-8 md:px-20 lg:px-40 border-t border-primary/10 backdrop-blur-sm">
+        <footer
+          class="px-6 py-8 md:px-20 lg:px-40 border-t border-primary/10 backdrop-blur-sm"
+        >
           <div
             class="flex flex-col md:flex-row justify-between items-center gap-4"
           >
@@ -386,14 +419,25 @@
 
       // GSAP
       let tl = gsap.timeline({
-        scrollTrigger:{
-              trigger: `.form`,
-              start:`top 80%`,
-              // markers:true
-            }
+        scrollTrigger: {
+          trigger: `.form`,
+          start: `top 80%`,
+          // markers:true
+        },
       });
       let tll = gsap.timeline();
       document.addEventListener(`DOMContentLoaded`, (event) => {
+        gsap.fromTo(`.scroll`, {
+          width: `0`,
+        },{
+          width:`100%`,
+          scrollTrigger: {
+            trigger: `body`,
+            start: `top top`,
+            end: `bottom bottom`,
+            scrub: 2,
+          },
+        });
         tll.from(`nav`, {
           opacity: 0,
           y: 150,
